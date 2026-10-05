@@ -117,8 +117,8 @@ nav a:hover {
      justify-content: center;
      gap: 10px;
 
-     min-width: 210px;
-     padding: 15px 26px;
+     min-width: 175px;
+     padding: 12px 20px;
 
      background: linear-gradient(135deg, #168cff, #635bff);
      color: #ffffff;
@@ -127,7 +127,7 @@ nav a:hover {
      border-radius: 12px;
 
      text-decoration: none;
-     font-size: 16px;
+     font-size: 15px;
      font-weight: 700;
 
      margin-top: 15px;
