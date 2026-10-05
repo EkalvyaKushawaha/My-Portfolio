@@ -691,3 +691,268 @@ footer p {
      margin: 5px 0;
      font-size: 14px;
 }
+
+/* ================================
+   ADVANCED PORTFOLIO BUTTONS
+   ================================ */
+
+/* Main Buttons */
+.button {
+     position: relative;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     gap: 12px;
+
+     min-width: 210px;
+     padding: 15px 26px;
+
+     background: linear-gradient(135deg, #168cff, #635bff);
+     color: #ffffff;
+
+     border: 1px solid rgba(255, 255, 255, 0.18);
+     border-radius: 12px;
+
+     text-decoration: none;
+     font-size: 16px;
+     font-weight: 700;
+     letter-spacing: 0.3px;
+
+     box-shadow:
+          0 8px 25px rgba(77, 141, 255, 0.25),
+          inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+     overflow: hidden;
+     transition: all 0.35s ease;
+}
+
+/* Shine Effect */
+.button::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -120%;
+
+     width: 80%;
+     height: 100%;
+
+     background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.25),
+          transparent
+     );
+
+     transform: skewX(-20deg);
+     transition: left 0.6s ease;
+}
+
+.button:hover::before {
+     left: 140%;
+}
+
+.button:hover {
+     transform: translateY(-4px) scale(1.02);
+
+     box-shadow:
+          0 15px 35px rgba(77, 141, 255, 0.4),
+          0 0 25px rgba(77, 141, 255, 0.18);
+
+     border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Click Effect */
+.button:active {
+     transform: translateY(-1px) scale(0.98);
+}
+
+
+/* ================================
+   GITHUB + LINKEDIN BUTTONS
+   ================================ */
+
+.social-buttons {
+     display: flex;
+     gap: 15px;
+     margin-top: 20px;
+}
+
+.social-buttons a {
+     position: relative;
+
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+
+     min-width: 125px;
+     padding: 12px 22px;
+
+     background: rgba(14, 25, 45, 0.75);
+     color: #ffffff;
+
+     border: 1px solid #30476b;
+     border-radius: 12px;
+
+     text-decoration: none;
+     font-size: 15px;
+     font-weight: 600;
+
+     backdrop-filter: blur(10px);
+
+     box-shadow:
+          0 5px 18px rgba(0, 0, 0, 0.25),
+          inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+     transition: all 0.35s ease;
+     overflow: hidden;
+}
+
+/* Social Button Glow */
+.social-buttons a::before {
+     content: "";
+     position: absolute;
+     inset: 0;
+
+     background: linear-gradient(
+          135deg,
+          rgba(77, 141, 255, 0.18),
+          transparent 60%
+     );
+
+     opacity: 0;
+     transition: opacity 0.3s ease;
+}
+
+.social-buttons a:hover::before {
+     opacity: 1;
+}
+
+.social-buttons a:hover {
+     transform: translateY(-4px);
+
+     border-color: #4d8dff;
+
+     color: #ffffff;
+
+     box-shadow:
+          0 10px 25px rgba(77, 141, 255, 0.25),
+          0 0 18px rgba(77, 141, 255, 0.12);
+}
+
+.social-buttons a:active {
+     transform: translateY(-1px);
+}
+
+
+/* ================================
+   PROJECT BUTTONS
+   ================================ */
+
+.project-button {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+
+     min-width: 130px;
+     padding: 11px 20px;
+
+     margin-top: 15px;
+
+     background: linear-gradient(135deg, #168cff, #4d8dff);
+     color: #ffffff;
+
+     border: 1px solid rgba(255, 255, 255, 0.15);
+     border-radius: 10px;
+
+     text-decoration: none;
+     font-size: 14px;
+     font-weight: 600;
+
+     box-shadow: 0 6px 18px rgba(77, 141, 255, 0.2);
+
+     transition: all 0.3s ease;
+}
+
+.project-button:hover {
+     transform: translateY(-4px);
+
+     box-shadow:
+          0 10px 25px rgba(77, 141, 255, 0.35),
+          0 0 15px rgba(77, 141, 255, 0.15);
+
+     background: linear-gradient(135deg, #4d8dff, #635bff);
+}
+
+.project-button:active {
+     transform: translateY(-1px);
+}
+
+
+/* ================================
+   CONTACT BUTTONS
+   ================================ */
+
+.contact-links a {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+
+     min-width: 120px;
+     padding: 12px 22px;
+
+     background: rgba(14, 25, 45, 0.8);
+
+     border: 1px solid #30476b;
+     border-radius: 12px;
+
+     color: #ffffff;
+     text-decoration: none;
+
+     font-weight: 600;
+
+     transition: all 0.3s ease;
+}
+
+.contact-links a:hover {
+     transform: translateY(-4px);
+
+     background: linear-gradient(135deg, #168cff, #635bff);
+
+     border-color: #4d8dff;
+
+     box-shadow:
+          0 10px 25px rgba(77, 141, 255, 0.3);
+}
+
+
+@media (max-width: 768px) {
+
+     .button {
+          min-width: 190px;
+          padding: 14px 20px;
+          font-size: 15px;
+     }
+
+     .social-buttons {
+          justify-content: center;
+          gap: 12px;
+     }
+
+     .social-buttons a {
+          min-width: 105px;
+          padding: 11px 18px;
+     }
+
+     .project-button {
+          width: auto;
+          min-width: 120px;
+     }
+
+     .contact-links {
+          gap: 12px;
+     }
+
+     .contact-links a {
+          min-width: 150px;
+     }
+}
