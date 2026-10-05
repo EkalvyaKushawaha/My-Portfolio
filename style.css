@@ -111,23 +111,46 @@ nav a:hover {
 
 
 .button {
-     display: inline-block;
+     position: relative;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     gap: 10px;
 
-     background-color: #4d8dff;
-     color: white;
+     min-width: 210px;
+     padding: 15px 26px;
 
-     padding: 12px 22px;
+     background: linear-gradient(135deg, #168cff, #635bff);
+     color: #ffffff;
 
-     border-radius: 8px;
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     border-radius: 12px;
 
      text-decoration: none;
+     font-size: 16px;
+     font-weight: 700;
 
      margin-top: 15px;
+
+     box-shadow: 0 8px 25px rgba(77, 141, 255, 0.3);
+
+     transition: all 0.35s ease;
 }
 
-
 .button:hover {
-     background-color: #326fd8;
+     transform: translateY(-4px) scale(1.02);
+
+     background: linear-gradient(135deg, #168cff, #635bff);
+
+     box-shadow:
+          0 15px 35px rgba(77, 141, 255, 0.45),
+          0 0 20px rgba(77, 141, 255, 0.2);
+
+     border-color: rgba(255, 255, 255, 0.4);
+}
+
+.button:active {
+     transform: translateY(-1px) scale(0.98);
 }
 
 .hero {
